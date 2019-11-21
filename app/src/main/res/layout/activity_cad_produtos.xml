@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CadProdutosActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/relativecampos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="35dp">
+
+
+        <TextView
+            android:id="@+id/txtCadProdutos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cadstro de Produtos"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+
+
+        <TextView
+            android:id="@+id/txtNomeProdutos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="85dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_toLeftOf="@+id/txtCadProdutos"
+
+            />
+
+        <TextView
+            android:id="@+id/txtUnidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unidade"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/txtNomeProdutos"
+            android:layout_marginTop="144dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+
+            />
+
+        <TextView
+            android:id="@+id/txtValidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Validade"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/txtUnidade"
+            android:layout_marginTop="203dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            />
+
+
+        <!-- Esse android:layout_below="@+id/edtUsuario"  é para colocar a senha abaixo do usuario-->
+
+        <EditText
+            android:id="@+id/edtNomeProdutos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtNomeProdutos"
+            android:layout_alignBaseline="@+id/txtNomeProdutos"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="33dp"
+            android:ems="10"
+
+
+            />
+
+
+        <EditText
+            android:id="@+id/edtUnidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtUnidade"
+            android:layout_alignBaseline="@+id/txtUnidade"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="33dp"
+            android:ems="10"
+            />
+
+        <EditText
+            android:id="@+id/edtValidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtValidade"
+            android:layout_alignBaseline="@+id/txtValidade"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="33dp"
+            android:ems="10"
+            />
+
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/relativeBotoes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/edtValidade">
+
+
+            <Button
+                android:id="@+id/btnNovoProduto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salvar"
+
+                />
+            <Button
+                android:id="@+id/btnConsultarProduto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/btnNovoProduto"
+                android:layout_alignTop="@+id/btnNovoProduto"
+                android:text="Consultar"
+
+                />
+            <Button
+                android:id="@+id/btnVoltar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/btnConsultarProduto"
+                android:layout_alignTop="@+id/btnConsultarProduto"
+                android:text="Voltar"
+
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,26 @@
+# Turn rewrite engine on
+Options +FollowSymlinks
+RewriteEngine on
+
+
+
+# map neat URL to internal URL
+
+RewriteRule ^usuarios/lista/$   bd/VerificarLogin.php?page_key=Listar [qsa]
+RewriteRule ^usuarios/encerrar/$   bd/VerificarLogin.php?page_sair=Listar [qsa]
+
+RewriteRule ^produtos/incluir/$   bd/controleProdutos.php?page_key=Listar [qsa]
+RewriteRule ^produtos/consultar/$   bd/controleProdutos.php?page_lista=Listar [qsa]
+
+RewriteRule ^produtos/lista/$   api/RestController.php?page_key=Listar [qsa]
+RewriteRule ^produtos/lista/([a-z0-9\-]+)$    api/RestController.php?page_key=Listar&nome=$1 [qsa]
+
+RewriteRule ^produtos/alterar/(\d+)\/([a-zA-Z0-9\s]+)\/(\d{4}-\d{2}-\d{2})/$ api/RestController.php?page_key=Alterar&id=$1&nome=$2&vencimento=$3 [QSA,NC,L]
+
+RewriteRule ^produtos/incluir/([a-z0-9\-]+)\/([a-z0-9\-]+)\/(\d{4}-\d{2}-\d{2})$ api/RestController.php?page_key=Incluir&nome=$1&vencimento=$2&unidade=$3 [QSA,NC,L]
+
+RewriteRule ^produtos/delete/(\d+)$   api/RestController.php?page_key=Delete&id=$1 [QSA,NC,L]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
